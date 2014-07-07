@@ -8,7 +8,7 @@ class EventsControllerTest < ActionController::TestCase
 
   test "should get add" do
     post :create
-    assert_response :success
+    assert_response :created
   end
 
 

@@ -25,6 +25,14 @@ class EventsController < ApplicationController
     @event = Event.find(params[:id])
   end
 
+  def show
+    @event = Event.find(params[:id])
+    puts "found event ${event}"
+    respond_to do | format |
+      format.xml {@event}
+    end
+  end
+
   private
 
   def post_params
