@@ -21,15 +21,16 @@ class EventsController < ApplicationController
 
   end
 
-  def event
-    @event = Event.find(params[:id])
-  end
-
+  #def event
+  #  @event = Event.find(params[:id])
+  #end
+  #
   def show
     @event = Event.find(params[:id])
     puts "found event ${event}"
-    respond_to do | format |
-      format.xml {@event}
+    respond_to do |format|
+      format.html
+      format.xml { render :xml => @event.to_xml }
     end
   end
 

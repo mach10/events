@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
-  get 'events/index'
-
-  post 'events/create'
-
-  get 'events/event'
-
-  root 'events#index'
+  #get 'events/index'
+  #
+  #post 'events/create'
+  #
+  #get 'events/event/:id'
+  #
+  #root 'events#index'
 
   resources :events
 
