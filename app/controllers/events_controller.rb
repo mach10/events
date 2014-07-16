@@ -2,7 +2,7 @@ class EventsController < ApplicationController
 
   skip_before_action :verify_authenticity_token
 
-  respond_to :xml, :json
+  respond_to :xml, :json, :html
 
   def index
   end
@@ -21,10 +21,6 @@ class EventsController < ApplicationController
 
   end
 
-  #def event
-  #  @event = Event.find(params[:id])
-  #end
-  #
   def show
     @event = Event.find(params[:id])
     puts "found event ${event}"

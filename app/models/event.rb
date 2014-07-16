@@ -1,5 +1,9 @@
 class Event < ActiveRecord::Base
-  #validates :title, :start,  presence => true
-  #end
- # validates :start, numericality: {greater_than: Time.now.getutc}
-  end
+
+  validates :title, :start, :owner,  presence: true
+
+  validates :start, numericality: {greater_than: Time.now.getutc.to_i}
+
+
+
+end
