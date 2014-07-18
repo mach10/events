@@ -4,6 +4,4 @@ class Event < ActiveRecord::Base
 
   validates :start, numericality: {greater_than: Time.now.getutc.to_i}
 
-
-
 end
