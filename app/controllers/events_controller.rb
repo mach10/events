@@ -23,7 +23,6 @@ class EventsController < ApplicationController
 
   def show
     @event = Event.find(params[:id])
-    puts "found event ${event}"
     respond_to do |format|
       format.html
       format.xml { render :xml => @event.to_xml }
@@ -33,8 +32,6 @@ class EventsController < ApplicationController
   private
 
   def post_params
-    puts 'in post params'
-    puts params
     params.require(:event).permit(:title, :description, :owner, :start)
   end
 end

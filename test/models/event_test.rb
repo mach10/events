@@ -21,7 +21,7 @@ class EventTest < ActiveSupport::TestCase
   end
 
   test "should be invalid event" do
-     @event = Event.new @attr.merge(start: 100)
+    @event = Event.new @attr.merge(start: 100)
     assert @event.invalid?
   end
 
