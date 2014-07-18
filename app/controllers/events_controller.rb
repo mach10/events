@@ -29,6 +29,19 @@ class EventsController < ApplicationController
     end
   end
 
+  def owner
+    events = Event.where(owner: params[:id]).order('created_at ASC')
+
+    respond_to do |format|
+      if events.nil?
+        format.xml {render :xml => ''}
+      else
+        format.xml { render :xml => events.to_xml }
+      end
+
+    end
+  end
+
   private
 
   def post_params
