@@ -29,6 +29,9 @@ class EventsController < ApplicationController
     end
   end
 
+  #this is to show all an owners events.
+  #TODO have a parameter or a header indicating pagination and if
+  #absent return the first 10 only
   def owner
     events = Event.where(owner: params[:id]).order('created_at ASC')
 

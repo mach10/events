@@ -28,7 +28,7 @@ class EventsControllerTest < ActionController::TestCase
 
   test 'it should return all a users events including those in the past' do
     get :owner, {id: 23}
-    assert  @response.body.to_s.scan('<event>').size == 2
+    assert  @response.body.to_s.scan('<event>').size == 10
     assert_response :success
   end
 
