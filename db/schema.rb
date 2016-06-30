@@ -17,9 +17,9 @@ ActiveRecord::Schema.define(version: 20140705100254) do
     t.string   "title"
     t.text     "description"
     t.integer  "start"
+    t.integer  "owner"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "owner"
   end
 
 end
